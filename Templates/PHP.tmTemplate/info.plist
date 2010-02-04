@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>command</key>
+	<string>if [[ ! -f "$TM_NEW_FILE" ]]; then
+   TM_DATE=`date +%Y-%m-%d` \
+   perl -pe 's/\$\{([^}]*)\}/$ENV{$1}/g' \
+      &lt; index.php &gt; "$TM_NEW_FILE"
+fi</string>
+	<key>extension</key>
+	<string>php</string>
+	<key>name</key>
+	<string>PHP script</string>
+	<key>uuid</key>
+	<string>DC32353F-5ED8-4941-99BB-DEF67FC852BD</string>
+</dict>
+</plist>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>switch ($TM_SELECTED_TEXT)
+{
+	$0
+}</string>
+	<key>keyEquivalent</key>
+	<string>^@S</string>
+	<key>name</key>
+	<string>make switch ...</string>
+	<key>scope</key>
+	<string>source.php</string>
+	<key>uuid</key>
+	<string>C0B8B53B-B0E8-459C-918C-B595CC700795</string>
+</dict>
+</plist>

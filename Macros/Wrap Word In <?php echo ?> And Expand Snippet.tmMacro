@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>commands</key>
+	<array>
+		<dict>
+			<key>command</key>
+			<string>moveWordLeftAndModifySelection:</string>
+		</dict>
+		<dict>
+			<key>command</key>
+			<string>cut:</string>
+		</dict>
+		<dict>
+			<key>argument</key>
+			<string>$></string>
+			<key>command</key>
+			<string>insertText:</string>
+		</dict>
+		<dict>
+			<key>command</key>
+			<string>expandCodeSnippet:</string>
+		</dict>
+		<dict>
+			<key>command</key>
+			<string>paste:</string>
+		</dict>
+		<dict>
+			<key>command</key>
+			<string>expandCodeSnippet:</string>
+		</dict>
+	</array>
+	<key>name</key>
+	<string>Wrap Word In &lt;?php echo ?&gt; And Expand Snippet</string>
+	<key>scope</key>
+	<string>text.html</string>
+	<key>tabTrigger</key>
+	<string>$</string>
+	<key>uuid</key>
+	<string>74F1DAA1-F39E-44B5-BFA7-8918642FD62D</string>
+</dict>
+</plist>

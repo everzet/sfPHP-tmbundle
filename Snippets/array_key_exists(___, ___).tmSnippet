@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>array_key_exists(${1:'value'}, ${0:array()})</string>
+	<key>name</key>
+	<string>array_key_exists(..., ...)</string>
+	<key>scope</key>
+	<string>source.php</string>
+	<key>tabTrigger</key>
+	<string>ake</string>
+	<key>uuid</key>
+	<string>22B1C12A-810A-46AF-9943-D01319320524</string>
+</dict>
+</plist>

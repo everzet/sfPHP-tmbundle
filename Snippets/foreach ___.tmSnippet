@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>foreach (${1:\$vars} as \$${2:key}${3: =&gt; \$${4:value}})
+{
+	
+}</string>
+	<key>name</key>
+	<string>foreach ...</string>
+	<key>scope</key>
+	<string>source.php</string>
+	<key>tabTrigger</key>
+	<string>foreach</string>
+	<key>uuid</key>
+	<string>27200628-B31A-42D8-8B24-101344787A66</string>
+</dict>
+</plist>

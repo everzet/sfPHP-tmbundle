@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>${TM_SELECTED_TEXT/([\t ]*).*/$1/m}try
+${TM_SELECTED_TEXT/([\t ]*).*/$1/m}{
+	${3:${TM_SELECTED_TEXT/(\A.*)|(.+)|\n\z/(?1:$0:(?2:  $0))/g}}
+${TM_SELECTED_TEXT/([\t ]*).*/$1/m}}
+${TM_SELECTED_TEXT/([\t ]*).*/$1/m}catch (${1:Exception} ${2:\$e})
+${TM_SELECTED_TEXT/([\t ]*).*/$1/m}{
+${TM_SELECTED_TEXT/([\t ]*).*/$1/m}	$0
+${TM_SELECTED_TEXT/([\t ]*).*/$1/m}}</string>
+	<key>keyEquivalent</key>
+	<string>^@T</string>
+	<key>name</key>
+	<string>wrap in try ... catch ...</string>
+	<key>scope</key>
+	<string>source.php</string>
+	<key>uuid</key>
+	<string>A387EFC6-089C-4B4D-9BD3-9952F72057DA</string>
+</dict>
+</plist>

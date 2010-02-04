@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>commands</key>
+	<array>
+		<dict>
+			<key>command</key>
+			<string>moveToEndOfLine:</string>
+		</dict>
+		<dict>
+			<key>argument</key>
+			<string>;</string>
+			<key>command</key>
+			<string>insertText:</string>
+		</dict>
+		<dict>
+			<key>command</key>
+			<string>insertNewline:</string>
+		</dict>
+	</array>
+	<key>keyEquivalent</key>
+	<string>$@</string>
+	<key>name</key>
+	<string>Append ; &amp; Move To New Line</string>
+	<key>scope</key>
+	<string>source.php</string>
+	<key>useGlobalClipboard</key>
+	<true/>
+	<key>uuid</key>
+	<string>5C47D096-A6DE-4BDE-9820-8F7348624FDB</string>
+</dict>
+</plist>

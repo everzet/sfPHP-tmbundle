@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>&lt;?php for (\$${1:i} = ${2:0}$3; \$$1 &lt; ${4:10}; \$$1++): ?&gt;
+	$0
+&lt;?php endfor; ?&gt;</string>
+	<key>name</key>
+	<string>&lt;?php for ...</string>
+	<key>scope</key>
+	<string>text.html</string>
+	<key>tabTrigger</key>
+	<string>for</string>
+	<key>uuid</key>
+	<string>FB801803-1A19-4733-BC5B-9E7EE4CBBA7C</string>
+</dict>
+</plist>

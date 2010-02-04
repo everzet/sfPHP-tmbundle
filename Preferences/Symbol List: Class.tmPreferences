@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>name</key>
+	<string>Symbol List: Class</string>
+	<key>scope</key>
+	<string>entity.name.type.class.php</string>
+	<key>settings</key>
+	<dict>
+		<key>showInSymbolList</key>
+		<integer>1</integer>
+		<key>symbolTransformation</key>
+		<string>s/^//</string>
+	</dict>
+	<key>uuid</key>
+	<string>FE6E3B04-0B21-404D-88E3-42BF14FF1E11</string>
+</dict>
+</plist>

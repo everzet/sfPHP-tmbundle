@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>/*
+ * This file is part of the ${1:package}.
+ * (c) ${2:`date +%Y`} ${3:${TM_ORGANIZATION_NAME}}
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
+/**
+ * ${4:myClass} ${5:does things}.
+ *
+ * @package    ${6:$1}
+ * @subpackage ${7:class}
+ * @author     $3
+ * @version    ${8:1.0.0}
+ */
+${9:abstract }class $4${10: extends ${11:BaseClass}}${12: implements ${13:BaseInterface}}
+{
+	$0
+}</string>
+	<key>name</key>
+	<string>class ...</string>
+	<key>scope</key>
+	<string>source.php</string>
+	<key>tabTrigger</key>
+	<string>class</string>
+	<key>uuid</key>
+	<string>25D8005F-BDE5-483E-908C-68099E937EE5</string>
+</dict>
+</plist>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>throw new $1Exception(${0:'Error processing request'});</string>
+	<key>name</key>
+	<string>throw ...</string>
+	<key>scope</key>
+	<string>source.php</string>
+	<key>tabTrigger</key>
+	<string>throw</string>
+	<key>uuid</key>
+	<string>163AE8DA-80A0-47D9-A65A-32EAA95247E0</string>
+</dict>
+</plist>
