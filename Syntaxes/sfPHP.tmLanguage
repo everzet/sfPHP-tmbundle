@@ -1153,7 +1153,7 @@
 				</dict>
 				<dict>
 					<key>begin</key>
-					<string>(?i)^\s*(abstract|final)?\s*(class)\s+([a-z0-9_]+)\s*</string>
+					<string>(?i)^\s*(abstract|final)?\s*(class)\s+</string>
 					<key>beginCaptures</key>
 					<dict>
 						<key>1</key>
@@ -1166,11 +1166,6 @@
 							<key>name</key>
 							<string>storage.type.class.php</string>
 						</dict>
-						<key>3</key>
-						<dict>
-							<key>name</key>
-							<string>entity.name.type.class.php</string>
-						</dict>
 					</dict>
 					<key>end</key>
 					<string>$</string>
@@ -1179,6 +1174,8 @@
 					<key>patterns</key>
 					<array>
 						<dict>
+							<key>begin</key>
+							<string>(?i:(extends))\s+</string>
 							<key>captures</key>
 							<dict>
 								<key>1</key>
@@ -1186,18 +1183,22 @@
 									<key>name</key>
 									<string>storage.modifier.extends.php</string>
 								</dict>
-								<key>2</key>
+							</dict>
+							<key>end</key>
+							<string>(?=\s*\b(?i:(implements)))|$</string>
+							<key>patterns</key>
+							<array>
 								<dict>
+									<key>match</key>
+									<string>[a-zA-Z0-9_]+</string>
 									<key>name</key>
 									<string>entity.other.inherited-class.php</string>
 								</dict>
-							</dict>
-							<key>match</key>
-							<string>(?i:(extends))\s+([a-zA-Z0-9_]+)\s*</string>
+							</array>
 						</dict>
 						<dict>
 							<key>begin</key>
-							<string>(?i:(implements))\s+([a-zA-Z0-9_]+)\s*</string>
+							<string>(?i:(implements))\s+</string>
 							<key>beginCaptures</key>
 							<dict>
 								<key>1</key>
@@ -1205,29 +1206,24 @@
 									<key>name</key>
 									<string>storage.modifier.implements.php</string>
 								</dict>
-								<key>2</key>
-								<dict>
-									<key>name</key>
-									<string>support.class.implements.php</string>
-								</dict>
 							</dict>
 							<key>end</key>
 							<string>(?=\s*\b(?i:(extends)))|$</string>
 							<key>patterns</key>
 							<array>
 								<dict>
-									<key>captures</key>
-									<dict>
-										<key>1</key>
-										<dict>
-											<key>name</key>
-											<string>support.class.implements.php</string>
-										</dict>
-									</dict>
 									<key>match</key>
-									<string>,\s*([a-zA-Z0-9_]+)\s*</string>
+									<string>[a-zA-Z0-9_]+</string>
+									<key>name</key>
+									<string>support.class.implements.php</string>
 								</dict>
 							</array>
+						</dict>
+						<dict>
+							<key>match</key>
+							<string>[a-zA-Z0-9_]+</string>
+							<key>name</key>
+							<string>entity.name.type.class.php</string>
 						</dict>
 					</array>
 				</dict>
