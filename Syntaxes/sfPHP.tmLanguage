@@ -1248,7 +1248,7 @@
 						</dict>
 					</dict>
 					<key>end</key>
-					<string>;|$</string>
+					<string>;</string>
 					<key>name</key>
 					<string>meta.namespace.php</string>
 					<key>patterns</key>
@@ -1273,7 +1273,7 @@
 						</dict>
 					</dict>
 					<key>end</key>
-					<string>;|$</string>
+					<string>;</string>
 					<key>name</key>
 					<string>meta.use.php</string>
 					<key>patterns</key>
