@@ -3,10 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>Version snippet. Used for version information show.</string>
+	<string>namespace ${1:Namespace\Class};</string>
 	<key>name</key>
-	<string>v1.1.0 (21 Feb 2010)</string>
+	<string>namespace ...</string>
+	<key>scope</key>
+	<string>source.php</string>
+	<key>tabTrigger</key>
+	<string>ns</string>
 	<key>uuid</key>
-	<string>05D023F8-86A3-4C22-AF30-35661FABA5DA</string>
+	<string>00CE94D2-8684-40FA-9884-F11853D25A99</string>
 </dict>
 </plist>

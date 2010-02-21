@@ -9,6 +9,7 @@
 			<string>05D023F8-86A3-4C22-AF30-35661FABA5DA</string>
 			<string>------------------------------------</string>
 			<string>0270CBE7-9C91-4F26-BE5B-7ABD26BDF995</string>
+			<string>551E0DA0-C014-4D42-8DC8-8FEA3E3095E6</string>
 			<string>08FBE967-E2B3-4426-9C34-8EEEF24CA2C0</string>
 			<string>59753DF2-D920-47B2-B402-16D8FADC13C1</string>
 			<string>56E0D187-23D2-413E-93A3-4B1FBEEBA67E</string>
@@ -73,6 +74,16 @@
 				</array>
 				<key>name</key>
 				<string>Exceptions</string>
+			</dict>
+			<key>551E0DA0-C014-4D42-8DC8-8FEA3E3095E6</key>
+			<dict>
+				<key>items</key>
+				<array>
+					<string>00CE94D2-8684-40FA-9884-F11853D25A99</string>
+					<string>012BA66A-B3EE-43F1-B294-2134BCEF2D76</string>
+				</array>
+				<key>name</key>
+				<string>Namespaces</string>
 			</dict>
 			<key>56292D10-118F-450A-AA7D-88D9B44E8805</key>
 			<dict>
@@ -234,6 +245,8 @@
 		<string>BC132E89-ADE3-4A45-ADA5-BB9909908604</string>
 		<string>A6713B57-B021-44AE-BB04-4BE2F95354F7</string>
 		<string>C0BB509C-C22F-42DE-A101-4CFF2A390F0E</string>
+		<string>00CE94D2-8684-40FA-9884-F11853D25A99</string>
+		<string>012BA66A-B3EE-43F1-B294-2134BCEF2D76</string>
 		<string>232E58F6-2EFA-4E05-BEC9-9F006A43DB16</string>
 		<string>F3CC7E67-9FAC-4767-A46C-0631196D1320</string>
 		<string>8AD9965D-D343-41ED-8965-D016B7584392</string>
