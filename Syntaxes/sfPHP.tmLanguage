@@ -1333,33 +1333,35 @@
 					</array>
 				</dict>
 				<dict>
-					<key>captures</key>
+					<key>begin</key>
+					<string>(catch)\s*\(</string>
+					<key>beginCaptures</key>
 					<dict>
 						<key>1</key>
 						<dict>
 							<key>name</key>
 							<string>keyword.control.exception.php</string>
 						</dict>
-						<key>2</key>
+					</dict>
+					<key>end</key>
+					<string>\)</string>
+					<key>name</key>
+					<string>meta.catch.php</string>
+					<key>patterns</key>
+					<array>
 						<dict>
-							<key>name</key>
-							<string>support.class.php</string>
-						</dict>
-						<key>3</key>
-						<dict>
+							<key>match</key>
+							<string>\$[a-zA-Z_\x{7f}-\x{ff}][a-zA-Z0-9_\x{7f}-\x{ff}]*</string>
 							<key>name</key>
 							<string>variable.other.php</string>
 						</dict>
-						<key>4</key>
 						<dict>
+							<key>match</key>
+							<string>\w+</string>
 							<key>name</key>
-							<string>punctuation.definition.variable.php</string>
+							<string>support.class.php</string>
 						</dict>
-					</dict>
-					<key>match</key>
-					<string>\b(catch)\b\s*\(\s*([A-Za-z_][A-Za-z_0-9]*)\s*((\$+)[a-zA-Z_\x{7f}-\x{ff}][a-zA-Z0-9_\x{7f}-\x{ff}]*)\s*\)</string>
-					<key>name</key>
-					<string>meta.catch.php</string>
+					</array>
 				</dict>
 				<dict>
 					<key>match</key>
@@ -1853,21 +1855,33 @@
 					<string>keyword.operator.assignment.php</string>
 				</dict>
 				<dict>
-					<key>captures</key>
+					<key>begin</key>
+					<string>(instanceof)\s+</string>
+					<key>beginCaptures</key>
 					<dict>
 						<key>1</key>
 						<dict>
 							<key>name</key>
 							<string>keyword.operator.type.php</string>
 						</dict>
-						<key>2</key>
+					</dict>
+					<key>end</key>
+					<string>[^\w\\\$]</string>
+					<key>patterns</key>
+					<array>
 						<dict>
+							<key>match</key>
+							<string>\$[a-zA-Z_\x{7f}-\x{ff}][a-zA-Z0-9_\x{7f}-\x{ff}]*</string>
+							<key>name</key>
+							<string>variable.other.php</string>
+						</dict>
+						<dict>
+							<key>match</key>
+							<string>\w+</string>
 							<key>name</key>
 							<string>support.class.php</string>
 						</dict>
-					</dict>
-					<key>match</key>
-					<string>(?i)\b(instanceof)\b(?:\s+(\w+))?</string>
+					</array>
 				</dict>
 				<dict>
 					<key>include</key>
