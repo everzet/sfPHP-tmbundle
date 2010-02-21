@@ -551,7 +551,7 @@
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>(?i)\b(new)\s+(?:(\$[a-zA-Z_\x{7f}-\x{ff}][a-zA-Z0-9_\x{7f}-\x{ff}]*)|(\w+))|(\w+)(?=::)</string>
+			<string>(?i)\b(new)\s+(?:(\$[a-zA-Z_\x{7f}-\x{ff}][a-zA-Z0-9_\x{7f}-\x{ff}]*)|([\w]+))|([\w]+)(?=::)</string>
 		</dict>
 		<key>interpolation</key>
 		<dict>
@@ -1118,23 +1118,13 @@
 				</dict>
 				<dict>
 					<key>begin</key>
-					<string>^(?i)\s*(interface)\s+([a-z0-9_]+)\s*(extends)?\s*</string>
+					<string>^(?i)\s*(interface)\s+</string>
 					<key>beginCaptures</key>
 					<dict>
 						<key>1</key>
 						<dict>
 							<key>name</key>
 							<string>storage.type.interface.php</string>
-						</dict>
-						<key>2</key>
-						<dict>
-							<key>name</key>
-							<string>entity.name.type.interface.php</string>
-						</dict>
-						<key>3</key>
-						<dict>
-							<key>name</key>
-							<string>storage.modifier.extends.php</string>
 						</dict>
 					</dict>
 					<key>end</key>
@@ -1144,10 +1134,33 @@
 					<key>patterns</key>
 					<array>
 						<dict>
+							<key>begin</key>
+							<string>(?i:(extends))\s+</string>
+							<key>captures</key>
+							<dict>
+								<key>1</key>
+								<dict>
+									<key>name</key>
+									<string>storage.modifier.extends.php</string>
+								</dict>
+							</dict>
+							<key>end</key>
+							<string>(?=\s*\b(?i:(implements)))|$</string>
+							<key>patterns</key>
+							<array>
+								<dict>
+									<key>match</key>
+									<string>[a-zA-Z0-9_]+</string>
+									<key>name</key>
+									<string>entity.other.inherited-class.php</string>
+								</dict>
+							</array>
+						</dict>
+						<dict>
 							<key>match</key>
 							<string>[a-zA-Z0-9_]+</string>
 							<key>name</key>
-							<string>entity.other.inherited-class.php</string>
+							<string>entity.name.type.interface.php</string>
 						</dict>
 					</array>
 				</dict>
