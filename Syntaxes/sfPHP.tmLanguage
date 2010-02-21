@@ -527,31 +527,33 @@
 		</dict>
 		<key>instantiation</key>
 		<dict>
-			<key>captures</key>
+			<key>begin</key>
+			<string>(?i)\b(new)\s+</string>
+			<key>beginCaptures</key>
 			<dict>
 				<key>1</key>
 				<dict>
 					<key>name</key>
 					<string>keyword.other.new.php</string>
 				</dict>
-				<key>2</key>
+			</dict>
+			<key>end</key>
+			<string>,|;</string>
+			<key>patterns</key>
+			<array>
 				<dict>
+					<key>match</key>
+					<string>\$[a-zA-Z_\x{7f}-\x{ff}][a-zA-Z0-9_\x{7f}-\x{ff}]*</string>
 					<key>name</key>
 					<string>variable.other.php</string>
 				</dict>
-				<key>3</key>
 				<dict>
+					<key>match</key>
+					<string>\w+</string>
 					<key>name</key>
 					<string>support.class.php</string>
 				</dict>
-				<key>4</key>
-				<dict>
-					<key>name</key>
-					<string>support.class.php</string>
-				</dict>
-			</dict>
-			<key>match</key>
-			<string>(?i)\b(new)\s+(?:(\$[a-zA-Z_\x{7f}-\x{ff}][a-zA-Z0-9_\x{7f}-\x{ff}]*)|([\w]+))|([\w]+)(?=::)</string>
+			</array>
 		</dict>
 		<key>interpolation</key>
 		<dict>
