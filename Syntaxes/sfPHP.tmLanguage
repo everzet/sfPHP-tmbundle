@@ -507,6 +507,29 @@
 					<string>support.constant.std.php</string>
 				</dict>
 				<dict>
+					<key>captures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>support.class.php</string>
+						</dict>
+						<key>2</key>
+						<dict>
+							<key>name</key>
+							<string>keyword.operator.class.php</string>
+						</dict>
+					</dict>
+					<key>comment</key>
+					<string>In PHP, any identifier which is not a variable is taken to be a constant.
+				However, if there is no constant defined with the given name then a notice
+				is generated and the constant is assumed to have the value of its name.</string>
+					<key>match</key>
+					<string>([a-zA-Z_\x{7f}-\x{ff}][a-zA-Z0-9_\x{7f}-\x{ff}\\]*)(::)</string>
+					<key>name</key>
+					<string>constant.other.class.php</string>
+				</dict>
+				<dict>
 					<key>comment</key>
 					<string>In PHP, any identifier which is not a variable is taken to be a constant.
 				However, if there is no constant defined with the given name then a notice
