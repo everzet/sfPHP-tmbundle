@@ -7,9 +7,9 @@
 	<key>name</key>
 	<string>self::...</string>
 	<key>scope</key>
-	<string>meta.php.class</string>
+	<string>meta.php.function.method.regular, meta.php.function.method.static</string>
 	<key>tabTrigger</key>
-	<string>$c</string>
+	<string>$</string>
 	<key>uuid</key>
 	<string>B5137F21-3A66-4546-B413-6B206048572A</string>
 </dict>
