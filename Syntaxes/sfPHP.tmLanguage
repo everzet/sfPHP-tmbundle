@@ -567,13 +567,30 @@
 			<array>
 				<dict>
 					<key>begin</key>
+					<string>(?=^( *).*static.*function)</string>
+					<key>comment</key>
+					<string>Uses lookahead to match methods; includes 'source.php' &amp; symfony patterns to avoid infinite recursion</string>
+					<key>end</key>
+					<string>(?=^\1})</string>
+					<key>name</key>
+					<string>meta.php.function.method.static</string>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>include</key>
+							<string>#language</string>
+						</dict>
+					</array>
+				</dict>
+				<dict>
+					<key>begin</key>
 					<string>(?=^( *).*function)</string>
 					<key>comment</key>
 					<string>Uses lookahead to match methods; includes 'source.php' &amp; symfony patterns to avoid infinite recursion</string>
 					<key>end</key>
 					<string>(?=^\1})</string>
 					<key>name</key>
-					<string>meta.php.function.method</string>
+					<string>meta.php.function.method.regular</string>
 					<key>patterns</key>
 					<array>
 						<dict>
