@@ -12,8 +12,10 @@
 	<string>(/\*|\{\s*$|&lt;&lt;&lt;HTML)</string>
 	<key>foldingStopMarker</key>
 	<string>(\*/|^\s*\}|^HTML;)</string>
+	<key>keyEquivalent</key>
+	<string>^~P</string>
 	<key>name</key>
-	<string>PHP</string>
+	<string>sfPHP</string>
 	<key>patterns</key>
 	<array>
 		<dict>
@@ -140,6 +142,372 @@
 					<key>patterns</key>
 					<array>
 						<dict>
+							<key>begin</key>
+							<string>(?=.*new\ *lime_test\(.*\))</string>
+							<key>comment</key>
+							<string>Uses lookahead to match all code after new lime_test() call; includes 'source.php' to avoid infinite recursion</string>
+							<key>end</key>
+							<string>(?=\?&gt;)</string>
+							<key>name</key>
+							<string>meta.symfony.test.unit</string>
+							<key>patterns</key>
+							<array>
+								<dict>
+									<key>include</key>
+									<string>#language</string>
+								</dict>
+							</array>
+						</dict>
+						<dict>
+							<key>begin</key>
+							<string>(?=.*new\ *sfTestFunctional\(.*\))</string>
+							<key>comment</key>
+							<string>Uses lookahead to match all code after new sfTestFunctional() call; includes 'source.php' to avoid infinite recursion</string>
+							<key>end</key>
+							<string>(?=\?&gt;)</string>
+							<key>name</key>
+							<string>meta.symfony.test.functional</string>
+							<key>patterns</key>
+							<array>
+								<dict>
+									<key>include</key>
+									<string>#language</string>
+								</dict>
+							</array>
+						</dict>
+						<dict>
+							<key>begin</key>
+							<string>^( *)(?=function)</string>
+							<key>comment</key>
+							<string>Uses lookahead to match functions; includes 'source.php' &amp; symfony patterns to avoid infinite recursion</string>
+							<key>end</key>
+							<string>^\1(?=})</string>
+							<key>name</key>
+							<string>meta.php.function</string>
+							<key>patterns</key>
+							<array>
+								<dict>
+									<key>include</key>
+									<string>#language</string>
+								</dict>
+							</array>
+						</dict>
+						<dict>
+							<key>begin</key>
+							<string>^( *)(?=(abstract +)?class)</string>
+							<key>comment</key>
+							<string>Uses lookahead to match classes; includes 'source.php' &amp; symfony patterns to avoid infinite recursion</string>
+							<key>end</key>
+							<string>^\1(?=})</string>
+							<key>name</key>
+							<string>meta.php.class</string>
+							<key>patterns</key>
+							<array>
+								<dict>
+									<key>begin</key>
+									<string>^( *)(?=class +(([.a-zA-Z0-9_:]+Actions( +extends +[.a-zA-Z0-9_:]+)?)))</string>
+									<key>comment</key>
+									<string>Uses lookahead to match classes with the Actions suffix; includes 'source.php' to avoid infinite recursion</string>
+									<key>end</key>
+									<string>^\1(?=})</string>
+									<key>name</key>
+									<string>meta.symfony.actions</string>
+									<key>patterns</key>
+									<array>
+										<dict>
+											<key>include</key>
+											<string>#classes</string>
+										</dict>
+										<dict>
+											<key>include</key>
+											<string>#language</string>
+										</dict>
+									</array>
+								</dict>
+								<dict>
+									<key>begin</key>
+									<string>(^ *)(?=class +(([.a-zA-Z0-9_:]+Action( +extends +[.a-zA-Z0-9_:]+)?)))</string>
+									<key>comment</key>
+									<string>Uses lookahead to match classes with the Action suffix; includes 'source.php' to avoid infinite recursion</string>
+									<key>end</key>
+									<string>^\1(?=})</string>
+									<key>name</key>
+									<string>meta.symfony.action</string>
+									<key>patterns</key>
+									<array>
+										<dict>
+											<key>include</key>
+											<string>#classes</string>
+										</dict>
+										<dict>
+											<key>include</key>
+											<string>#language</string>
+										</dict>
+									</array>
+								</dict>
+								<dict>
+									<key>begin</key>
+									<string>^( *)(?=class +(([.a-zA-Z0-9_:]+Components( +extends +[.a-zA-Z0-9_:]+)?)))</string>
+									<key>comment</key>
+									<string>Uses lookahead to match classes with the Components suffix; includes 'source.php' to avoid infinite recursion</string>
+									<key>end</key>
+									<string>^\1(?=})</string>
+									<key>name</key>
+									<string>meta.symfony.components</string>
+									<key>patterns</key>
+									<array>
+										<dict>
+											<key>include</key>
+											<string>#classes</string>
+										</dict>
+										<dict>
+											<key>include</key>
+											<string>#language</string>
+										</dict>
+									</array>
+								</dict>
+								<dict>
+									<key>begin</key>
+									<string>(^ *)(?=class +(([.a-zA-Z0-9_:]+Component( +extends +[.a-zA-Z0-9_:]+)?)))</string>
+									<key>comment</key>
+									<string>Uses lookahead to match classes with the Component suffix; includes 'source.php' to avoid infinite recursion</string>
+									<key>end</key>
+									<string>^\1(?=})</string>
+									<key>name</key>
+									<string>meta.symfony.component</string>
+									<key>patterns</key>
+									<array>
+										<dict>
+											<key>include</key>
+											<string>#classes</string>
+										</dict>
+										<dict>
+											<key>include</key>
+											<string>#language</string>
+										</dict>
+									</array>
+								</dict>
+								<dict>
+									<key>begin</key>
+									<string>(^ *)(?=(abstract +)?class +(([.a-zA-Z0-9_:]+FormFilter(.*)?)))</string>
+									<key>comment</key>
+									<string>Uses lookahead to match classes with the FormFilter suffix; includes 'source.php' to avoid infinite recursion</string>
+									<key>end</key>
+									<string>^\1(?=})</string>
+									<key>name</key>
+									<string>meta.symfony.form</string>
+									<key>patterns</key>
+									<array>
+										<dict>
+											<key>include</key>
+											<string>#classes</string>
+										</dict>
+										<dict>
+											<key>include</key>
+											<string>#language</string>
+										</dict>
+									</array>
+								</dict>
+								<dict>
+									<key>begin</key>
+									<string>(^ *)(?=(abstract +)?class +(([.a-zA-Z0-9_:]+FormDoctrine(.*)?)))</string>
+									<key>comment</key>
+									<string>Uses lookahead to match classes with the FormDoctrine suffix; includes 'source.php' to avoid infinite recursion</string>
+									<key>end</key>
+									<string>^\1(?=})</string>
+									<key>name</key>
+									<string>meta.symfony.form</string>
+									<key>patterns</key>
+									<array>
+										<dict>
+											<key>include</key>
+											<string>#classes</string>
+										</dict>
+										<dict>
+											<key>include</key>
+											<string>#language</string>
+										</dict>
+									</array>
+								</dict>
+								<dict>
+									<key>begin</key>
+									<string>(^ *)(?=(abstract +)?class +(([.a-zA-Z0-9_:]+FormPropel(.*)?)))</string>
+									<key>comment</key>
+									<string>Uses lookahead to match classes with the FormPropel suffix; includes 'source.php' to avoid infinite recursion</string>
+									<key>end</key>
+									<string>^\1(?=})</string>
+									<key>name</key>
+									<string>meta.symfony.form</string>
+									<key>patterns</key>
+									<array>
+										<dict>
+											<key>include</key>
+											<string>#classes</string>
+										</dict>
+										<dict>
+											<key>include</key>
+											<string>#language</string>
+										</dict>
+									</array>
+								</dict>
+								<dict>
+									<key>begin</key>
+									<string>(^ *)(?=class +(([.a-zA-Z0-9_:]+Filter( +extends +[.a-zA-Z0-9_:]+)?)))</string>
+									<key>comment</key>
+									<string>Uses lookahead to match classes with the Filter suffix; includes 'source.php' to avoid infinite recursion</string>
+									<key>end</key>
+									<string>^\1(?=})</string>
+									<key>name</key>
+									<string>meta.symfony.filter</string>
+									<key>patterns</key>
+									<array>
+										<dict>
+											<key>include</key>
+											<string>#classes</string>
+										</dict>
+										<dict>
+											<key>include</key>
+											<string>#language</string>
+										</dict>
+									</array>
+								</dict>
+								<dict>
+									<key>begin</key>
+									<string>(^ *)(?=class +(([.a-zA-Z0-9_:]+Widget(.*)?)))</string>
+									<key>comment</key>
+									<string>Uses lookahead to match classes with the Widget suffix; includes 'source.php' to avoid infinite recursion</string>
+									<key>end</key>
+									<string>^\1(?=})</string>
+									<key>name</key>
+									<string>meta.symfony.widget</string>
+									<key>patterns</key>
+									<array>
+										<dict>
+											<key>include</key>
+											<string>#classes</string>
+										</dict>
+										<dict>
+											<key>include</key>
+											<string>#language</string>
+										</dict>
+									</array>
+								</dict>
+								<dict>
+									<key>begin</key>
+									<string>(^ *)(?=(abstract +)?class +(([.a-zA-Z0-9_:]+Form(.*)?)))</string>
+									<key>comment</key>
+									<string>Uses lookahead to match classes with the Form suffix; includes 'source.php' to avoid infinite recursion</string>
+									<key>end</key>
+									<string>^\1(?=})</string>
+									<key>name</key>
+									<string>meta.symfony.form</string>
+									<key>patterns</key>
+									<array>
+										<dict>
+											<key>include</key>
+											<string>#classes</string>
+										</dict>
+										<dict>
+											<key>include</key>
+											<string>#language</string>
+										</dict>
+									</array>
+								</dict>
+								<dict>
+									<key>begin</key>
+									<string>(^ *)(?=class +(([.a-zA-Z0-9_:]+( +extends +Doctrine_Table))))</string>
+									<key>comment</key>
+									<string>Uses lookahead to match classes witch extends Doctrine_Table; includes 'source.php' to avoid infinite recursion</string>
+									<key>end</key>
+									<string>^\1(?=})</string>
+									<key>name</key>
+									<string>meta.doctrine.table</string>
+									<key>patterns</key>
+									<array>
+										<dict>
+											<key>include</key>
+											<string>#classes</string>
+										</dict>
+										<dict>
+											<key>include</key>
+											<string>#language</string>
+										</dict>
+									</array>
+								</dict>
+								<dict>
+									<key>begin</key>
+									<string>(^ *)(?=class +(([.a-zA-Z0-9_:]+( +extends +sfPluginConfiguration))))</string>
+									<key>comment</key>
+									<string>Uses lookahead to match classes witch extends sfPluginConfiguration; includes 'source.php' to avoid infinite recursion</string>
+									<key>end</key>
+									<string>^\1(?=})</string>
+									<key>name</key>
+									<string>meta.symfony.plugin.configuration</string>
+									<key>patterns</key>
+									<array>
+										<dict>
+											<key>include</key>
+											<string>#classes</string>
+										</dict>
+										<dict>
+											<key>include</key>
+											<string>#language</string>
+										</dict>
+									</array>
+								</dict>
+								<dict>
+									<key>begin</key>
+									<string>(^ *)(?=class +(([.a-zA-Z0-9_:]+( +extends +sfApplicationConfiguration))))</string>
+									<key>comment</key>
+									<string>Uses lookahead to match classes witch extends sfApplicationConfiguration; includes 'source.php' to avoid infinite recursion</string>
+									<key>end</key>
+									<string>^\1(?=})</string>
+									<key>name</key>
+									<string>meta.symfony.app.configuration</string>
+									<key>patterns</key>
+									<array>
+										<dict>
+											<key>include</key>
+											<string>#classes</string>
+										</dict>
+										<dict>
+											<key>include</key>
+											<string>#language</string>
+										</dict>
+									</array>
+								</dict>
+								<dict>
+									<key>begin</key>
+									<string>(^ *)(?=class +(([.a-zA-Z0-9_:]+( +extends +sfProjectConfiguration))))</string>
+									<key>comment</key>
+									<string>Uses lookahead to match classes witch extends sfProjectConfiguration; includes 'source.php' to avoid infinite recursion</string>
+									<key>end</key>
+									<string>^\1(?=})</string>
+									<key>name</key>
+									<string>meta.symfony.project.configuration</string>
+									<key>patterns</key>
+									<array>
+										<dict>
+											<key>include</key>
+											<string>#classes</string>
+										</dict>
+										<dict>
+											<key>include</key>
+											<string>#language</string>
+										</dict>
+									</array>
+								</dict>
+								<dict>
+									<key>include</key>
+									<string>#classes</string>
+								</dict>
+								<dict>
+									<key>include</key>
+									<string>#language</string>
+								</dict>
+							</array>
+						</dict>
+						<dict>
 							<key>include</key>
 							<string>#language</string>
 						</dict>
@@ -193,6 +561,33 @@
 	</array>
 	<key>repository</key>
 	<dict>
+		<key>classes</key>
+		<dict>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>begin</key>
+					<string>(?=^( *).*function)</string>
+					<key>comment</key>
+					<string>Uses lookahead to match methods; includes 'source.php' &amp; symfony patterns to avoid infinite recursion</string>
+					<key>end</key>
+					<string>(?=^\1})</string>
+					<key>name</key>
+					<string>meta.php.function.method</string>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>include</key>
+							<string>#language</string>
+						</dict>
+					</array>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#language</string>
+				</dict>
+			</array>
+		</dict>
 		<key>constants</key>
 		<dict>
 			<key>patterns</key>
@@ -3922,6 +4317,6 @@
 	<key>scopeName</key>
 	<string>source.php</string>
 	<key>uuid</key>
-	<string>22986475-8CA5-11D9-AEDD-000D93C8BE28</string>
+	<string>A81A5CED-D7C3-4051-B189-DE3E1476838F</string>
 </dict>
 </plist>
